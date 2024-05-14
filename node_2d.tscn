@@ -1,13 +1,13 @@
 [gd_scene load_steps=17 format=3 uid="uid://o611mhqjkwau"]
 
-[ext_resource type="Texture2D" uid="uid://beydygxvs74ee" path="res://background.png" id="1_1avog"]
-[ext_resource type="Texture2D" uid="uid://di6a5frpk5rdg" path="res://—Pngtree—red ball festival decoration_4415196.png" id="2_1rer2"]
-[ext_resource type="Texture2D" uid="uid://d26683nb1iwde" path="res://pngwing.com.png" id="3_71ajn"]
-[ext_resource type="Texture2D" uid="uid://celevoguemxpa" path="res://land.png" id="4_rwd3l"]
-[ext_resource type="Texture2D" uid="uid://w0u85wja8s5h" path="res://blue.png" id="5_v76fx"]
-[ext_resource type="Texture2D" uid="uid://ckneg3lny63n3" path="res://red .png" id="6_e1vvy"]
-[ext_resource type="Texture2D" uid="uid://gl3ogtepqc05" path="res://red_door.png" id="7_ipenj"]
-[ext_resource type="Texture2D" uid="uid://dh420iumr0lvq" path="res://blue_door.png" id="8_ynuk7"]
+[ext_resource type="Texture2D" uid="uid://beydygxvs74ee" path="res://imagini/background.png" id="1_1avog"]
+[ext_resource type="Texture2D" uid="uid://bk41qwa0n7cuc" path="res://imagini/redBall.png" id="2_yvx8w"]
+[ext_resource type="Texture2D" uid="uid://blrqru1768koh" path="res://imagini/blueBall.png" id="3_jwi62"]
+[ext_resource type="Texture2D" uid="uid://celevoguemxpa" path="res://imagini/land.png" id="4_rwd3l"]
+[ext_resource type="Texture2D" uid="uid://w0u85wja8s5h" path="res://imagini/blue.png" id="5_v76fx"]
+[ext_resource type="Texture2D" uid="uid://ckneg3lny63n3" path="res://imagini/red .png" id="6_e1vvy"]
+[ext_resource type="Texture2D" uid="uid://gl3ogtepqc05" path="res://imagini/red_door.png" id="7_ipenj"]
+[ext_resource type="Texture2D" uid="uid://dh420iumr0lvq" path="res://imagini/blue_door.png" id="8_ynuk7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mfuxi"]
 texture = ExtResource("4_rwd3l")
@@ -1259,14 +1259,14 @@ offset_bottom = 649.0
 texture = ExtResource("1_1avog")
 
 [node name="player2" type="Sprite2D" parent="."]
-position = Vector2(484, 558)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_1rer2")
+position = Vector2(505, 564)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("2_yvx8w")
 
 [node name="player1" type="Sprite2D" parent="."]
-position = Vector2(645, 559)
+position = Vector2(643, 565)
 scale = Vector2(0.075, 0.067)
-texture = ExtResource("3_71ajn")
+texture = ExtResource("3_jwi62")
 
 [node name="TileMap_ground" type="TileMap" parent="."]
 scale = Vector2(0.4, 0.4)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://celevoguemxpa"
-path="res://.godot/imported/land.png-1ac97c03a4fcee1ef72f550e5167d6db.ctex"
+uid="uid://w0u85wja8s5h"
+path="res://.godot/imported/blue.png-c3de0a02add7c2dd91dcdecb9703a484.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://land.png"
-dest_files=["res://.godot/imported/land.png-1ac97c03a4fcee1ef72f550e5167d6db.ctex"]
+source_file="res://imagini/blue.png"
+dest_files=["res://.godot/imported/blue.png-c3de0a02add7c2dd91dcdecb9703a484.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gl3ogtepqc05"
-path="res://.godot/imported/red_door.png-b319175c35d36506f1fd998da4c031db.ctex"
+uid="uid://d26683nb1iwde"
+path="res://.godot/imported/pngwing.com.png-21144402b4736400e131499031b80860.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://red_door.png"
-dest_files=["res://.godot/imported/red_door.png-b319175c35d36506f1fd998da4c031db.ctex"]
+source_file="res://imagini/pngwing.com.png"
+dest_files=["res://.godot/imported/pngwing.com.png-21144402b4736400e131499031b80860.ctex"]
 
 [params]
 
