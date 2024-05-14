@@ -1,6 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://o611mhqjkwau"]
+[gd_scene load_steps=24 format=3 uid="uid://o611mhqjkwau"]
 
-[ext_resource type="Texture2D" uid="uid://beydygxvs74ee" path="res://imagini/background.png" id="1_1avog"]
+[ext_resource type="Texture2D" uid="uid://beydygxvs74ee" path="res://imagini/backgrounds/background.png" id="1_1avog"]
 [ext_resource type="Texture2D" uid="uid://bk41qwa0n7cuc" path="res://imagini/redBall.png" id="2_yvx8w"]
 [ext_resource type="Texture2D" uid="uid://blrqru1768koh" path="res://imagini/blueBall.png" id="3_jwi62"]
 [ext_resource type="Texture2D" uid="uid://celevoguemxpa" path="res://imagini/land.png" id="4_rwd3l"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ckneg3lny63n3" path="res://imagini/red .png" id="6_e1vvy"]
 [ext_resource type="Texture2D" uid="uid://gl3ogtepqc05" path="res://imagini/red_door.png" id="7_ipenj"]
 [ext_resource type="Texture2D" uid="uid://dh420iumr0lvq" path="res://imagini/blue_door.png" id="8_ynuk7"]
+[ext_resource type="Texture2D" uid="uid://b7fjv8jvbllvp" path="res://imagini/coin.png" id="9_vui3g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mfuxi"]
 texture = ExtResource("4_rwd3l")
@@ -1263,6 +1264,9 @@ size = Vector2(189.219, 307.001)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tckuc"]
 size = Vector2(189.218, 307.001)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_321gq"]
+radius = 274.425
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -1322,7 +1326,6 @@ texture = ExtResource("7_ipenj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="finish_red/Area2D"]
 position = Vector2(-4.17285, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_u8tiy")
 
 [node name="finish_blue" type="Sprite2D" parent="."]
@@ -1334,5 +1337,14 @@ texture = ExtResource("8_ynuk7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="finish_blue/Area2D"]
 position = Vector2(-0.000244141, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_tckuc")
+
+[node name="coin" type="Sprite2D" parent="."]
+position = Vector2(67, 581)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("9_vui3g")
+
+[node name="Area2D" type="Area2D" parent="coin"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin/Area2D"]
+shape = SubResource("CircleShape2D_321gq")
