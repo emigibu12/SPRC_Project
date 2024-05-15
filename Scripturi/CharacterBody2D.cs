@@ -4,10 +4,10 @@ using System;
 public partial class CharacterBody2D : Godot.CharacterBody2D
 {
 	public const float Speed = 300.0f;
-	public const float JumpVelocity = -400.0f;
+	public const float JumpVelocity = -500.0f;
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
-	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
+	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle() * 1.2f;
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -26,7 +26,7 @@ public partial class CharacterBody2D : Godot.CharacterBody2D
 		Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
 		if (direction != Vector2.Zero)
 		{
-			velocity.X = direction.X * Speed;
+			velocity.X = direction.X * Speed * 2;
 		}
 		else
 		{
