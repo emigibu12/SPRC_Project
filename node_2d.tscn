@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://o611mhqjkwau"]
+[gd_scene load_steps=27 format=3 uid="uid://o611mhqjkwau"]
 
 [ext_resource type="Texture2D" uid="uid://beydygxvs74ee" path="res://imagini/backgrounds/background.png" id="1_1avog"]
 [ext_resource type="Texture2D" uid="uid://bk41qwa0n7cuc" path="res://imagini/redBall.png" id="2_yvx8w"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dh420iumr0lvq" path="res://imagini/blue_door.png" id="8_ynuk7"]
 [ext_resource type="Texture2D" uid="uid://b7fjv8jvbllvp" path="res://imagini/coin.png" id="9_vui3g"]
 [ext_resource type="Script" path="res://Scripturi/CharacterBody2D.cs" id="9_yxt0w"]
+[ext_resource type="Script" path="res://bluecharacter.cs" id="10_kfl5b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mfuxi"]
 texture = ExtResource("4_rwd3l")
@@ -3795,7 +3796,8 @@ size = Vector2(189.218, 307.001)
 [sub_resource type="CircleShape2D" id="CircleShape2D_321gq"]
 radius = 274.425
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jwdu5"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_evx52"]
+radius = 267.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -3803,11 +3805,6 @@ radius = 274.425
 offset_right = 1150.0
 offset_bottom = 649.0
 texture = ExtResource("1_1avog")
-
-[node name="player1" type="Sprite2D" parent="."]
-position = Vector2(643, 565)
-scale = Vector2(0.075, 0.067)
-texture = ExtResource("3_jwi62")
 
 [node name="TileMap_ground" type="TileMap" parent="."]
 scale = Vector2(0.4, 0.4)
@@ -3885,6 +3882,19 @@ texture = ExtResource("2_yvx8w")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(505, 564)
 scale = Vector2(0.075, 0.075)
-shape = SubResource("RectangleShape2D_jwdu5")
+shape = SubResource("CircleShape2D_evx52")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+script = ExtResource("10_kfl5b")
+
+[node name="player1" type="Sprite2D" parent="CharacterBody2D2"]
+position = Vector2(643, 565)
+scale = Vector2(0.075, 0.067)
+texture = ExtResource("3_jwi62")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(643, 565)
+scale = Vector2(0.075, 0.075)
+shape = SubResource("CircleShape2D_evx52")
 
 [connection signal="child_entered_tree" from="TileMap_Blue" to="CharacterBody2D/player2" method="_on_tile_map_blue_child_entered_tree"]
