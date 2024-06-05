@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cffeg6rldfvf"]
+
+[ext_resource type="Script" path="res://PlayerRosu.cs" id="1_n5hcu"]
+[ext_resource type="Texture2D" uid="uid://bk41qwa0n7cuc" path="res://imagini/redBall.png" id="2_x7gc2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rm7pg"]
+radius = 130.004
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_2pdyd"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="PlayerRosu" type="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_n5hcu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.52588e-05, 0)
+scale = Vector2(0.51, 0.5)
+texture = ExtResource("2_x7gc2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.10352e-05, 3.05176e-05)
+shape = SubResource("CircleShape2D_rm7pg")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_2pdyd")

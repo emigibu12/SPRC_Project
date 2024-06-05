@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6oct0p5v3ihm"]
+
+[ext_resource type="Script" path="res://PlayerAlbastru.cs" id="1_ou7x7"]
+[ext_resource type="Texture2D" uid="uid://blrqru1768koh" path="res://imagini/blueBall.png" id="2_uydh2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7bq0g"]
+radius = 255.159
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_uaxri"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="PlayerAlbastru" type="CharacterBody2D"]
+position = Vector2(1, 2)
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_ou7x7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_uydh2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7bq0g")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_uaxri")

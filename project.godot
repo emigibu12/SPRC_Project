@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Sprc Project"
-run/main_scene="res://node_2d.tscn"
+run/main_scene="res://Scripturi/Multiplayer Controller.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://GameManager.cs"
 
 [dotnet]
 

@@ -1,19 +1,18 @@
-[gd_scene load_steps=27 format=3 uid="uid://o611mhqjkwau"]
+[gd_scene load_steps=25 format=3 uid="uid://o611mhqjkwau"]
 
-[ext_resource type="Texture2D" uid="uid://beydygxvs74ee" path="res://imagini/backgrounds/background.png" id="1_1avog"]
-[ext_resource type="Texture2D" uid="uid://bk41qwa0n7cuc" path="res://imagini/redBall.png" id="2_yvx8w"]
-[ext_resource type="Texture2D" uid="uid://blrqru1768koh" path="res://imagini/blueBall.png" id="3_jwi62"]
-[ext_resource type="Texture2D" uid="uid://celevoguemxpa" path="res://imagini/land.png" id="4_rwd3l"]
-[ext_resource type="Texture2D" uid="uid://w0u85wja8s5h" path="res://imagini/blue.png" id="5_v76fx"]
-[ext_resource type="Texture2D" uid="uid://ckneg3lny63n3" path="res://imagini/red .png" id="6_e1vvy"]
-[ext_resource type="Texture2D" uid="uid://gl3ogtepqc05" path="res://imagini/red_door.png" id="7_ipenj"]
-[ext_resource type="Texture2D" uid="uid://dh420iumr0lvq" path="res://imagini/blue_door.png" id="8_ynuk7"]
-[ext_resource type="Texture2D" uid="uid://b7fjv8jvbllvp" path="res://imagini/coin.png" id="9_vui3g"]
-[ext_resource type="Script" path="res://Scripturi/CharacterBody2D.cs" id="9_yxt0w"]
-[ext_resource type="Script" path="res://bluecharacter.cs" id="10_kfl5b"]
+[ext_resource type="Script" path="res://SceneManager.cs" id="1_uv4co"]
+[ext_resource type="PackedScene" uid="uid://cffeg6rldfvf" path="res://player_rosu.tscn" id="2_scmq8"]
+[ext_resource type="Texture2D" uid="uid://beydygxvs74ee" path="res://imagini/backgrounds/background.png" id="2_yyh47"]
+[ext_resource type="Texture2D" uid="uid://celevoguemxpa" path="res://imagini/land.png" id="3_1ei05"]
+[ext_resource type="PackedScene" uid="uid://c6oct0p5v3ihm" path="res://player_albastru.tscn" id="3_yecbm"]
+[ext_resource type="Texture2D" uid="uid://w0u85wja8s5h" path="res://imagini/blue.png" id="4_y35ah"]
+[ext_resource type="Texture2D" uid="uid://ckneg3lny63n3" path="res://imagini/red .png" id="5_ski13"]
+[ext_resource type="Texture2D" uid="uid://gl3ogtepqc05" path="res://imagini/red_door.png" id="6_tsqsw"]
+[ext_resource type="Texture2D" uid="uid://dh420iumr0lvq" path="res://imagini/blue_door.png" id="7_gtetg"]
+[ext_resource type="Texture2D" uid="uid://b7fjv8jvbllvp" path="res://imagini/coin.png" id="8_nd43i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mfuxi"]
-texture = ExtResource("4_rwd3l")
+texture = ExtResource("3_1ei05")
 margins = Vector2i(6, 6)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -396,7 +395,7 @@ sources/1 = SubResource("TileSetAtlasSource_54g1b")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6kkgl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wq1nc"]
-texture = ExtResource("5_v76fx")
+texture = ExtResource("4_y35ah")
 margins = Vector2i(1, 0)
 separation = Vector2i(1, 0)
 0:0/0 = 0
@@ -1627,7 +1626,7 @@ sources/1 = SubResource("TileSetAtlasSource_wq1nc")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2o6ar"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c2t65"]
-texture = ExtResource("6_e1vvy")
+texture = ExtResource("5_ski13")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -4900,15 +4899,15 @@ size = Vector2(189.218, 307.001)
 [sub_resource type="CircleShape2D" id="CircleShape2D_321gq"]
 radius = 291.654
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_evx52"]
-radius = 267.0
-
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_uv4co")
+playerRosuScene = ExtResource("2_scmq8")
+playerAlbastruScene = ExtResource("3_yecbm")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1150.0
 offset_bottom = 649.0
-texture = ExtResource("1_1avog")
+texture = ExtResource("2_yyh47")
 
 [node name="TileMap_ground" type="TileMap" parent="."]
 scale = Vector2(0.4, 0.4)
@@ -4946,7 +4945,7 @@ shape = SubResource("RectangleShape2D_k8vyt")
 [node name="finish_red" type="Sprite2D" parent="."]
 position = Vector2(397, 348)
 scale = Vector2(0.179687, 0.221498)
-texture = ExtResource("7_ipenj")
+texture = ExtResource("6_tsqsw")
 
 [node name="Area2D" type="Area2D" parent="finish_red"]
 position = Vector2(-1278.61, 27.0883)
@@ -4958,7 +4957,7 @@ shape = SubResource("RectangleShape2D_u8tiy")
 [node name="finish_blue" type="Sprite2D" parent="."]
 position = Vector2(755, 348)
 scale = Vector2(0.179687, 0.221498)
-texture = ExtResource("8_ynuk7")
+texture = ExtResource("7_gtetg")
 
 [node name="Area2D" type="Area2D" parent="finish_blue"]
 position = Vector2(890.437, 902.943)
@@ -4970,7 +4969,7 @@ shape = SubResource("RectangleShape2D_tckuc")
 [node name="coin" type="Sprite2D" parent="."]
 position = Vector2(67, 581)
 scale = Vector2(0.09, 0.09)
-texture = ExtResource("9_vui3g")
+texture = ExtResource("8_nd43i")
 
 [node name="Area2D" type="Area2D" parent="coin"]
 position = Vector2(-11.1111, 0)
@@ -4978,31 +4977,14 @@ position = Vector2(-11.1111, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="coin/Area2D"]
 shape = SubResource("CircleShape2D_321gq")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("9_yxt0w")
+[node name="PlayerSpawnPoints" type="Node2D" parent="."]
 
-[node name="player2" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(505, 564)
-scale = Vector2(0.075, 0.075)
-texture = ExtResource("2_yvx8w")
+[node name="0" type="Node2D" parent="PlayerSpawnPoints" groups=["PlayerSpawnPoints"]]
+position = Vector2(497, 557)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(505, 564)
-scale = Vector2(0.075, 0.075)
-shape = SubResource("CircleShape2D_evx52")
+[node name="spawnRosu" type="Marker2D" parent="PlayerSpawnPoints/0"]
 
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
-script = ExtResource("10_kfl5b")
+[node name="1" type="Node2D" parent="PlayerSpawnPoints" groups=["PlayerSpawnPoints"]]
+position = Vector2(637, 550)
 
-[node name="player1" type="Sprite2D" parent="CharacterBody2D2"]
-position = Vector2(643, 565)
-scale = Vector2(0.075, 0.067)
-texture = ExtResource("3_jwi62")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
-position = Vector2(643, 565)
-scale = Vector2(0.075, 0.075)
-shape = SubResource("CircleShape2D_evx52")
-
-[connection signal="child_entered_tree" from="TileMap_Blue" to="CharacterBody2D/player2" method="_on_tile_map_blue_child_entered_tree"]
-[connection signal="child_entered_tree" from="coin" to="CharacterBody2D" method="_on_coin_child_entered_tree"]
+[node name="spawnAlbastru" type="Marker2D" parent="PlayerSpawnPoints/1"]
