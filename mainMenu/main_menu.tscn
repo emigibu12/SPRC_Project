@@ -74,7 +74,20 @@ layout_mode = 2
 [node name="Separator11" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
+[node name="Separator6" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator7" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
 [node name="Separator12" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "NAME:"
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="Separator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
@@ -85,28 +98,17 @@ layout_mode = 2
 text = "Connect to the SERVER !"
 horizontal_alignment = 1
 
-[node name="Button3" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="HOST" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_lupb2")
 theme_override_font_sizes/font_size = 25
-text = "START SERVER"
-
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "Server connection:  Not Connected"
-horizontal_alignment = 1
+text = "HOST"
 
 [node name="Separator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="Separator5" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Separator6" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Separator7" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="Separator8" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
@@ -115,23 +117,23 @@ layout_mode = 2
 [node name="Separator9" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="JOIN" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(150, 30)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_fonts/font = SubResource("SystemFont_lupb2")
 theme_override_font_sizes/font_size = 25
-text = "START GAME"
+text = "JOIN"
 script = ExtResource("3_2d1ik")
 
 [node name="Separator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="StartGame" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(150, 30)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = SubResource("SystemFont_lupb2")
 theme_override_font_sizes/font_size = 25
-text = "EXIT GAME"
+text = "START GAME"
 script = ExtResource("4_rkqa2")
