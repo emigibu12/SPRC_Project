@@ -8,13 +8,12 @@ public partial class PlayerRosu : CharacterBody2D
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
-
 	public override void _Ready(){
 		GetNode<MultiplayerSynchronizer>("MultiplayerSynchronizer").SetMultiplayerAuthority(int.Parse(Name));
 	}
 	public override void _PhysicsProcess(double delta)
 	{
-		if(GetNode<MultiplayerSynchronizer>("MultiplayerSynchronizer").GetMultiplayerAuthority() == Multiplayer.GetUniqueId());{
+		if(GetNode<MultiplayerSynchronizer>("MultiplayerSynchronizer").GetMultiplayerAuthority() == Multiplayer.GetUniqueId()){
 		Vector2 velocity = Velocity;
 
 		// Add the gravity.

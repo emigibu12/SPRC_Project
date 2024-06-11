@@ -17,6 +17,9 @@ public partial class MultiplayerController : Control
 		Multiplayer.PeerDisconnected += PeerDisconnnected;
 		Multiplayer.ConnectedToServer +=ConnectedToServer;
 		Multiplayer.ConnectionFailed += ConnectionFailed;
+		if(OS.GetCmdlineArgs().Contains("--server")){
+			hostGame();
+		}
 	}
 
 	public void PeerConnected(long id){
@@ -51,7 +54,7 @@ public partial class MultiplayerController : Control
 
 	private void hostGame(){
 		peer = new ENetMultiplayerPeer();
-		var error = peer.CreateServer(port, 2);
+		var error = peer.CreateServer(port, 3);
 		if(error != Error.Ok){
 			GD.Print("error cannot host! :" + error.ToString());
 			return;

@@ -13,7 +13,7 @@ public partial class PlayerAlbastru : CharacterBody2D
 	}
 	public override void _PhysicsProcess(double delta)
 	{
-		if(GetNode<MultiplayerSynchronizer>("MultiplayerSynchronizer").GetMultiplayerAuthority() == Multiplayer.GetUniqueId());{
+		if(GetNode<MultiplayerSynchronizer>("MultiplayerSynchronizer").GetMultiplayerAuthority() == Multiplayer.GetUniqueId()){
 
 		Vector2 velocity = Velocity;
 
